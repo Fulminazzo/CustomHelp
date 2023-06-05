@@ -1,0 +1,16 @@
+############################################################
+#               CustomHelp messages.yml file               #
+############################################################
+
+command-settings:
+  name: "help"
+  # The aliases of the help command.
+  aliases: ["?"]
+  # The description shown when executing /help help
+  description: "&eShows a help page with every command you can execute."
+
+# If a player execute a command that is available on the server, but she/he does not have permission
+# to execute it, she/he will receive a "Command not found" message.
+hide-commands: true
+
+commands: {}

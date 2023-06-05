@@ -1,0 +1,23 @@
+############################################################
+#               CustomHelp messages.yml file               #
+############################################################
+
+prefix: "&d&lCustomHelp &8» "
+
+general:
+  go-to-previous-page: "&bGo to previous page."
+  go-to-next-page: "&bGo to next page."
+  command-format: "&eHelp for &6%command%:\n&eDescription: &6%description%\n&ePermission: &6%permission%\n&eUsage: &6%usage%\n&eAliases: &6[%aliases%]\n"
+  click-to-try: "&bClick to try!"
+
+errors:
+  command-not-found: "&cCommand &4/%command% &cnot found! &7Type &6/help &7to see a list of all the available commands."
+  no-permissions: "&cYou don't have any permissions to execute command &4%command%&c."
+
+help:
+  format: "&8- &8(%command%) &a%usage% &7- %description%"
+  page: "&f&l %plugin-name% &eHelp Page "
+  page-format: "&6[ &a%page%&c/&a%max-page% &6]"
+  page-separator: "&6&l&m="
+  page-previous: "&e[&c<<<&e]%page-separator%%page-separator%"
+  page-next: "%page-separator%%page-separator%&e[&c>>>&e]"

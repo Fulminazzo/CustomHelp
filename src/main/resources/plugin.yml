@@ -1,0 +1,7 @@
+name: CustomHelp
+version: '${project.version}'
+description: CustomHelp is a simple plugin created to display a help message for every command a user can execute.
+main: it.fulminazzo.customhelp.CustomHelp
+api-version: 1.13
+authors: [ Fulminazzo ]
+load: POSTWORLD
