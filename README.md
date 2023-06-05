@@ -85,3 +85,12 @@ help:
 ```
 
 <img src="static/images/help-page-screenshot.png" alt="Help page preview">
+
+## Permissions
+The plugin only allows two permissions:
+
+### customhelp.bypass
+Allows to bypass every CustomHelp check and display every command that a player can execute (despite if blacklisted or not).
+
+### customhelp.bypass.%command-name%
+Like <b>customhelp.bypass</b> but for a specific command.
