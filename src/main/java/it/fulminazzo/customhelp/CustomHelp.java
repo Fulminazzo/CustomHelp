@@ -1,7 +1,6 @@
 package it.fulminazzo.customhelp;
 
 import it.angrybear.BearPlugin;
-import it.angrybear.Enums.LoggingMessage;
 import it.angrybear.Objects.BearPlayer;
 import it.fulminazzo.customhelp.Commands.HelpCommand;
 import it.fulminazzo.customhelp.Enums.ConfigOptions;
@@ -22,19 +21,8 @@ public class CustomHelp extends BearPlugin<BearPlayer, BearPlayer> {
     public void onEnable() {
         plugin = this;
         super.onEnable();
-        if (isEnabled()) {
+        if (isEnabled())
             Bukkit.getPluginManager().registerEvents(new CommandListener(this), this);
-        }
-    }
-
-    @Override
-    public void onDisable() {
-        try {
-            unloadAll();
-        } catch (Exception e) {
-            logWarning(LoggingMessage.GENERAL_ERROR_OCCURRED, "%task%", "disabling plugin",
-                    "%error%", e.getMessage() == null ? e.getClass().getSimpleName() : e.getMessage());
-        }
     }
 
     @Override
@@ -44,7 +32,8 @@ public class CustomHelp extends BearPlugin<BearPlayer, BearPlayer> {
         this.commandsManager = new CommandsManager();
     }
 
-    public void unloadAll() {
+    public void unloadAll() throws Exception {
+        super.unloadAll();
         unloadCommand();
     }
 
