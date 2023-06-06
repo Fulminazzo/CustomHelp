@@ -2,6 +2,7 @@ package it.fulminazzo.customhelp;
 
 import it.angrybear.BearPlugin;
 import it.angrybear.Enums.LoggingMessage;
+import it.angrybear.Objects.BearPlayer;
 import it.fulminazzo.customhelp.Commands.HelpCommand;
 import it.fulminazzo.customhelp.Enums.ConfigOptions;
 import it.fulminazzo.customhelp.Listeners.CommandListener;
@@ -12,7 +13,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomHelp extends BearPlugin {
+public class CustomHelp extends BearPlugin<BearPlayer, BearPlayer> {
     private static CustomHelp plugin;
     private HelpCommand helpCommand;
     private CommandsManager commandsManager;

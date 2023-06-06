@@ -33,7 +33,7 @@ public class CommandsManager {
                 .forEach(this.commands::add);
 
         // Then get missing commands.
-        HashMap<String, Command> knownCommands = (HashMap<String, Command>) CommandUtils.getKnownCommands().getObject();
+        HashMap<String, Command> knownCommands = CommandUtils.getKnownCommands().getObject();
         if (knownCommands != null) {
             knownCommands.values().stream()
                     .filter(c -> this.commands.stream().noneMatch(cc -> cc.getName().equals(c.getName())))
