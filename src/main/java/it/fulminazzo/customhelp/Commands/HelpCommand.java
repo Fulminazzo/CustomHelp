@@ -1,7 +1,7 @@
 package it.fulminazzo.customhelp.Commands;
 
 import it.angrybear.Commands.BearCommand;
-import it.angrybear.Utils.NumberUtil;
+import it.angrybear.Utils.NumberUtils;
 import it.angrybear.Utils.StringUtils;
 import it.angrybear.Utils.TextComponentUtils;
 import it.fulminazzo.customhelp.CustomHelp;
@@ -35,7 +35,7 @@ public class HelpCommand extends BearCommand<CustomHelp> {
         CommandsManager commandsManager = getPlugin().getCommandsManager();
         List<ConfigCommand> commandsDescriptions;
         int pageIndex;
-        if (args.length == 0 || NumberUtil.isNatural(args[0])) {
+        if (args.length == 0 || NumberUtils.isNatural(args[0])) {
             commandsDescriptions = commandsManager.getExecutableCommands(sender);
             pageIndex = args.length > 0 ? 0 : -1;
 
@@ -48,7 +48,7 @@ public class HelpCommand extends BearCommand<CustomHelp> {
             commandsDescriptions = commandsManager.getExecutableCommands(sender, args[0], true);
             if (commandsDescriptions.isEmpty())
                 commandsDescriptions = commandsManager.getExecutableCommands(sender, args[0]);
-            pageIndex = (args.length > 1 && !NumberUtil.isNatural(argument)) ? 1 : -1;
+            pageIndex = (args.length > 1 && !NumberUtils.isNatural(argument)) ? 1 : -1;
 
             if (commandsDescriptions.isEmpty()) {
                 sender.sendMessage(Message.COMMAND_NOT_FOUND.getMessage(true)

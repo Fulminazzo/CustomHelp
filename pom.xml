@@ -39,16 +39,6 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <relocations>
-                                <relocation>
-                                    <pattern>it.fulminazzo.reflectionutils</pattern>
-                                    <shadedPattern>it.fulminazzo.customhelp</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>it.angrybear</pattern>
-                                    <shadedPattern>it.fulminazzo.customhelp</shadedPattern>
-                                </relocation>
-                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
@@ -83,8 +73,8 @@
         <dependency>
             <groupId>it.angrybear</groupId>
             <artifactId>BearCommands</artifactId>
-            <version>5.0</version>
-            <scope>compile</scope>
+            <version>5.1</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
