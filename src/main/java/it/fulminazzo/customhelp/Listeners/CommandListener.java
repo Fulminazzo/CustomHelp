@@ -1,7 +1,7 @@
 package it.fulminazzo.customhelp.Listeners;
 
 import it.fulminazzo.customhelp.CustomHelp;
-import it.fulminazzo.customhelp.Enums.ConfigOptions;
+import it.fulminazzo.customhelp.Enums.ConfigOption;
 import it.fulminazzo.customhelp.Enums.Message;
 import it.fulminazzo.customhelp.Enums.Permission;
 import it.fulminazzo.customhelp.Objects.ConfigCommand;
@@ -25,6 +25,7 @@ public class CommandListener implements Listener {
 
     @EventHandler
     public void onPlayerCommand(PlayerCommandPreprocessEvent event) {
+        if (event.isCancelled()) return;
         Player player = event.getPlayer();
         String command = event.getMessage().split(" ")[0];
         if (command.startsWith("/")) command = command.substring(1);
@@ -36,7 +37,7 @@ public class CommandListener implements Listener {
             return;
         }
         if (!configCommand.canExecute(player)) {
-            if (ConfigOptions.HIDE_COMMANDS.getBoolean())
+            if (ConfigOption.HIDE_COMMANDS.getBoolean())
                 player.sendMessage(Message.COMMAND_NOT_FOUND.getMessage(false).replace("%command%", command));
             else
                 player.sendMessage(Message.NO_PERMISSIONS.getMessage(false).replace("%command%", command));

@@ -1,7 +1,7 @@
 package it.fulminazzo.customhelp.Managers;
 
 import it.angrybear.Utils.CommandUtils;
-import it.fulminazzo.customhelp.Enums.ConfigOptions;
+import it.fulminazzo.customhelp.Enums.ConfigOption;
 import it.fulminazzo.customhelp.Objects.ConfigCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -20,7 +20,7 @@ public class CommandsManager {
 
     public void reloadCommands() {
         this.commands.clear();
-        ConfigurationSection commandsSection = ConfigOptions.COMMANDS.getSection();
+        ConfigurationSection commandsSection = ConfigOption.COMMANDS.getSection();
         // First get plugin commands.
         List<Command> commands = Arrays.stream(Bukkit.getPluginManager().getPlugins())
                 .flatMap(p -> p.getDescription().getCommands().keySet().stream())

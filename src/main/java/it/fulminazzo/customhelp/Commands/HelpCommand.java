@@ -5,7 +5,7 @@ import it.angrybear.Utils.NumberUtils;
 import it.angrybear.Utils.StringUtils;
 import it.angrybear.Utils.TextComponentUtils;
 import it.fulminazzo.customhelp.CustomHelp;
-import it.fulminazzo.customhelp.Enums.ConfigOptions;
+import it.fulminazzo.customhelp.Enums.ConfigOption;
 import it.fulminazzo.customhelp.Enums.Message;
 import it.fulminazzo.customhelp.Enums.Permission;
 import it.fulminazzo.customhelp.Managers.CommandsManager;
@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class HelpCommand extends BearCommand<CustomHelp> {
 
     public HelpCommand(CustomHelp plugin, String commandName, List<String> aliases) {
-        super(plugin, commandName, Permission.HELP, ConfigOptions.COMMAND_DESCRIPTION.getString(),
+        super(plugin, commandName, Permission.HELP, ConfigOption.COMMAND_DESCRIPTION.getString(),
                 String.format("/%s <command>", commandName), aliases.toArray(new String[0]));
     }
 

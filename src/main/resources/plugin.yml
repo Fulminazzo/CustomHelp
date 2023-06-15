@@ -4,5 +4,5 @@ description: CustomHelp is a simple plugin created to display a help message for
 main: it.fulminazzo.customhelp.CustomHelp
 api-version: 1.13
 authors: [ Fulminazzo ]
-depend: [ BearCommands ]
+softdepend: [ BearCommands ]
 load: POSTWORLD

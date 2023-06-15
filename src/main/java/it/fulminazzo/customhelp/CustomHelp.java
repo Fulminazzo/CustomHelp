@@ -2,7 +2,7 @@ package it.fulminazzo.customhelp;
 
 import it.angrybear.SimpleBearPlugin;
 import it.fulminazzo.customhelp.Commands.HelpCommand;
-import it.fulminazzo.customhelp.Enums.ConfigOptions;
+import it.fulminazzo.customhelp.Enums.ConfigOption;
 import it.fulminazzo.customhelp.Listeners.CommandListener;
 import it.fulminazzo.customhelp.Managers.CommandsManager;
 import org.bukkit.Bukkit;
@@ -38,9 +38,9 @@ public class CustomHelp extends SimpleBearPlugin {
 
     public void loadCommand() throws Exception {
         unloadCommand();
-        String name = ConfigOptions.COMMAND_NAME.getString();
+        String name = ConfigOption.COMMAND_NAME.getString();
         if (name == null) throw new Exception("Command name cannot be null!");
-        List<String> aliases = ConfigOptions.COMMAND_ALIASES.getStringList();
+        List<String> aliases = ConfigOption.COMMAND_ALIASES.getStringList();
         if (aliases == null) aliases = new ArrayList<>();
         helpCommand = new HelpCommand(this, name, aliases);
         helpCommand.loadCommand();
