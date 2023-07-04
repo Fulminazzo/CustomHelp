@@ -1,6 +1,6 @@
 package it.fulminazzo.customhelp.Commands;
 
-import it.angrybear.Commands.BearCommand;
+import it.angrybear.Bukkit.Commands.BearCommand;
 import it.angrybear.Utils.NumberUtils;
 import it.angrybear.Utils.StringUtils;
 import it.angrybear.Utils.TextComponentUtils;

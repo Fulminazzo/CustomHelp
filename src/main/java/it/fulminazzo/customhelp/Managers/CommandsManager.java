@@ -1,6 +1,6 @@
 package it.fulminazzo.customhelp.Managers;
 
-import it.angrybear.Utils.CommandUtils;
+import it.angrybear.Bukkit.Utils.CommandUtils;
 import it.fulminazzo.customhelp.Enums.ConfigOption;
 import it.fulminazzo.customhelp.Objects.ConfigCommand;
 import org.bukkit.Bukkit;

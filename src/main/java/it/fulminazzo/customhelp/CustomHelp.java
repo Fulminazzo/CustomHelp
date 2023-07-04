@@ -1,8 +1,9 @@
 package it.fulminazzo.customhelp;
 
-import it.angrybear.SimpleBearPlugin;
+import it.angrybear.Bukkit.SimpleBearPlugin;
 import it.fulminazzo.customhelp.Commands.HelpCommand;
 import it.fulminazzo.customhelp.Enums.ConfigOption;
+import it.fulminazzo.customhelp.Enums.Permission;
 import it.fulminazzo.customhelp.Listeners.CommandListener;
 import it.fulminazzo.customhelp.Managers.CommandsManager;
 import org.bukkit.Bukkit;
@@ -19,6 +20,7 @@ public class CustomHelp extends SimpleBearPlugin {
     @Override
     public void onEnable() {
         plugin = this;
+        setPermissionsClass(Permission.class);
         super.onEnable();
         if (isEnabled())
             Bukkit.getPluginManager().registerEvents(new CommandListener(this), this);
@@ -34,6 +36,7 @@ public class CustomHelp extends SimpleBearPlugin {
     public void unloadAll() throws Exception {
         super.unloadAll();
         unloadCommand();
+        unloadPermissions(this);
     }
 
     public void loadCommand() throws Exception {

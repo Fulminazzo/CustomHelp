@@ -1,8 +1,8 @@
 package it.fulminazzo.customhelp.Enums;
 
+import it.angrybear.Objects.Configurations.Configuration;
 import it.angrybear.Utils.StringUtils;
 import it.fulminazzo.customhelp.CustomHelp;
-import org.bukkit.configuration.file.FileConfiguration;
 
 public enum Message {
     PREFIX("prefix"),
@@ -30,7 +30,7 @@ public enum Message {
 
     public String getMessage(boolean showPrefix) {
         String message = null;
-        FileConfiguration lang = CustomHelp.getPlugin().getLang();
+        Configuration lang = CustomHelp.getPlugin().getLang();
         if (lang != null) message = lang.getString(path);
         message = StringUtils.parseMessage(message);
         if (showPrefix) message = Message.PREFIX.getMessage(false) + message;
